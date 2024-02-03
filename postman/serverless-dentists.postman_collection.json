@@ -1,0 +1,39 @@
+{
+  "info": {
+    "_postman_id": "2bb20ec2-c154-4779-8592-9d10b8b65833",
+    "name": "serverless-dentists",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "POST create appointment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"appointment\": {\n    \"patient\": {\n      \"firstName\": \"John\",\n      \"lastName\": \"Doe\",\n      \"dateOfBirth\": \"1980-05-15\",\n      \"contactNumber\": \"123-456-7890\",\n      \"email\": \"john.doe@example.com\"\n    },\n    \"dentist\": {\n      \"name\": \"Dr. Smith\",\n      \"clinic\": \"Healthy Smiles Dental Clinic\",\n      \"contactNumber\": \"987-654-3210\"\n    },\n    \"date\": \"2024-02-15\",\n    \"time\": \"10:30 AM\",\n    \"duration\": \"1 hour\",\n    \"reason\": \"Regular check-up\",\n    \"notes\": \"Patient mentioned sensitivity in lower left molars.\"\n  }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-rest-id.execute-api.your-region.amazonaws.com/prod/appointments",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "appointments"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
